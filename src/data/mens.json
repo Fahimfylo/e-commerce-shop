@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "img": "mens.jpg",
+    "title": "Men's T-Shirt",
+    "rating": 4.5,
+    "sizes": {
+      "S": 40,
+      "M": 45,
+      "L": 50
+    },
+    "price": 22.99,
+    "aosDelay": "0"
+  },
+  {
+    "id": 2,
+    "img": "mens2.jpg",
+    "title": "Men's Shirt",
+    "rating": 4.6,
+    "sizes": {
+      "S": 38,
+      "M": 42,
+      "L": 46
+    },
+    "price": 32.99,
+    "aosDelay": "200"
+  },
+  {
+    "id": 3,
+    "img": "mens3.jpg",
+    "title": "Men's Jeans",
+    "rating": 4.7,
+    "sizes": {
+      "S": 30,
+      "M": 34,
+      "L": 38
+    },
+    "price": 39.99,
+    "aosDelay": "400"
+  },
+  {
+    "id": 4,
+    "img": "mens4.jpg",
+    "title": "Men's Blazer",
+    "rating": 4.8,
+    "sizes": {
+      "S": 36,
+      "M": 40,
+      "L": 44
+    },
+    "price": 69.99,
+    "aosDelay": "600"
+  },
+  {
+    "id": 5,
+    "img": "mens5.jpg",
+    "title": "Men's Hoodie",
+    "rating": 4.4,
+    "sizes": {
+      "S": 38,
+      "M": 42,
+      "L": 46
+    },
+    "price": 45.99,
+    "aosDelay": "800"
+  },
+  {
+    "id": 6,
+    "img": "mens.jpg",
+    "title": "Men's Jacket",
+    "rating": 4.6,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 55.99,
+    "aosDelay": "1000"
+  },
+  {
+    "id": 7,
+    "img": "mens2.jpg",
+    "title": "Men's Sweatshirt",
+    "rating": 4.8,
+    "sizes": {
+      "S": 42,
+      "M": 46,
+      "L": 50
+    },
+    "price": 49.99,
+    "aosDelay": "1200"
+  },
+  {
+    "id": 8,
+    "img": "mens3.jpg",
+    "title": "Men's Polo Shirt",
+    "rating": 4.5,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 27.99,
+    "aosDelay": "1400"
+  },
+  {
+    "id": 9,
+    "img": "mens4.jpg",
+    "title": "Men's Tracksuit",
+    "rating": 4.7,
+    "sizes": {
+      "S": 32,
+      "M": 36,
+      "L": 40
+    },
+    "price": 59.99,
+    "aosDelay": "1600"
+  },
+  {
+    "id": 10,
+    "img": "mens5.jpg",
+    "title": "Men's Cargo Pants",
+    "rating": 4.4,
+    "sizes": {
+      "S": 34,
+      "M": 38,
+      "L": 42
+    },
+    "price": 36.99,
+    "aosDelay": "1800"
+  },
+  {
+    "id": 11,
+    "img": "mens.jpg",
+    "title": "Men's Suit",
+    "rating": 4.8,
+    "sizes": {
+      "S": 38,
+      "M": 42,
+      "L": 46
+    },
+    "price": 149.99,
+    "aosDelay": "2000"
+  },
+  {
+    "id": 12,
+    "img": "mens2.jpg",
+    "title": "Men's Leather Jacket",
+    "rating": 4.9,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 119.99,
+    "aosDelay": "2200"
+  },
+  {
+    "id": 13,
+    "img": "mens3.jpg",
+    "title": "Men's Sweatpants",
+    "rating": 4.6,
+    "sizes": {
+      "S": 34,
+      "M": 38,
+      "L": 42
+    },
+    "price": 29.99,
+    "aosDelay": "2400"
+  },
+  {
+    "id": 14,
+    "img": "mens4.jpg",
+    "title": "Men's Shorts",
+    "rating": 4.5,
+    "sizes": {
+      "S": 30,
+      "M": 34,
+      "L": 38
+    },
+    "price": 24.99,
+    "aosDelay": "2600"
+  },
+  {
+    "id": 15,
+    "img": "mens5.jpg",
+    "title": "Men's Vest",
+    "rating": 4.7,
+    "sizes": {
+      "S": 38,
+      "M": 42,
+      "L": 46
+    },
+    "price": 18.99,
+    "aosDelay": "2800"
+  },
+  {
+    "id": 16,
+    "img": "mens.jpg",
+    "title": "Men's Cardigan",
+    "rating": 4.9,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 53.99,
+    "aosDelay": "3000"
+  },
+  {
+    "id": 17,
+    "img": "mens2.jpg",
+    "title": "Men's Chinos",
+    "rating": 4.6,
+    "sizes": {
+      "S": 32,
+      "M": 36,
+      "L": 40
+    },
+    "price": 44.99,
+    "aosDelay": "3200"
+  },
+  {
+    "id": 18,
+    "img": "mens3.jpg",
+    "title": "Men's Track Jacket",
+    "rating": 4.4,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 39.99,
+    "aosDelay": "3400"
+  },
+  {
+    "id": 19,
+    "img": "mens4.jpg",
+    "title": "Men's Winter Coat",
+    "rating": 4.8,
+    "sizes": {
+      "S": 42,
+      "M": 46,
+      "L": 50
+    },
+    "price": 129.99,
+    "aosDelay": "3600"
+  },
+  {
+    "id": 20,
+    "img": "mens5.jpg",
+    "title": "Men's Boots",
+    "rating": 4.9,
+    "sizes": {
+      "S": 40,
+      "M": 44,
+      "L": 48
+    },
+    "price": 79.99,
+    "aosDelay": "3800"
+  }
+]

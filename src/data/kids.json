@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "img": "kids.jpg",
+    "title": "Boys T-Shirt",
+    "rating": 4.7,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 14.99,
+    "aosDelay": "0"
+  },
+  {
+    "id": 2,
+    "img": "kids2.jpg",
+    "title": "Girls Dress",
+    "rating": 4.5,
+    "sizes": {
+      "S": 18,
+      "M": 22,
+      "L": 26
+    },
+    "price": 19.99,
+    "aosDelay": "200"
+  },
+  {
+    "id": 3,
+    "img": "kids3.jpg",
+    "title": "Boys Jeans",
+    "rating": 4.8,
+    "sizes": {
+      "S": 28,
+      "M": 32,
+      "L": 36
+    },
+    "price": 22.99,
+    "aosDelay": "400"
+  },
+  {
+    "id": 4,
+    "img": "kids4.jpg",
+    "title": "Boys T-Shirt",
+    "rating": 4.7,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 14.99,
+    "aosDelay": "600"
+  },
+  {
+    "id": 5,
+    "img": "kids5.jpg",
+    "title": "Girls Dress",
+    "rating": 4.5,
+    "sizes": {
+      "S": 18,
+      "M": 22,
+      "L": 26
+    },
+    "price": 19.99,
+    "aosDelay": "800"
+  },
+  {
+    "id": 6,
+    "img": "kids.jpg",
+    "title": "Boys Jeans",
+    "rating": 4.8,
+    "sizes": {
+      "S": 28,
+      "M": 32,
+      "L": 36
+    },
+    "price": 22.99,
+    "aosDelay": "1000"
+  },
+  {
+    "id": 7,
+    "img": "kids2.jpg",
+    "title": "Boys T-Shirt",
+    "rating": 4.7,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 14.99,
+    "aosDelay": "1200"
+  },
+  {
+    "id": 8,
+    "img": "kids3.jpg",
+    "title": "Girls Dress",
+    "rating": 4.5,
+    "sizes": {
+      "S": 18,
+      "M": 22,
+      "L": 26
+    },
+    "price": 19.99,
+    "aosDelay": "1400"
+  },
+  {
+    "id": 9,
+    "img": "kids4.jpg",
+    "title": "Boys Jeans",
+    "rating": 4.8,
+    "sizes": {
+      "S": 28,
+      "M": 32,
+      "L": 36
+    },
+    "price": 22.99,
+    "aosDelay": "1600"
+  },
+  {
+    "id": 10,
+    "img": "kids5.jpg",
+    "title": "Boys T-Shirt",
+    "rating": 4.7,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 14.99,
+    "aosDelay": "1800"
+  },
+  {
+    "id": 11,
+    "img": "kids.jpg",
+    "title": "Girls T-Shirt",
+    "rating": 4.6,
+    "sizes": {
+      "S": 22,
+      "M": 27,
+      "L": 32
+    },
+    "price": 18.99,
+    "aosDelay": "2000"
+  },
+  {
+    "id": 12,
+    "img": "kids2.jpg",
+    "title": "Boys Hoodie",
+    "rating": 4.7,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 24.99,
+    "aosDelay": "2200"
+  },
+  {
+    "id": 13,
+    "img": "kids3.jpg",
+    "title": "Girls Skirt",
+    "rating": 4.5,
+    "sizes": {
+      "S": 24,
+      "M": 28,
+      "L": 32
+    },
+    "price": 16.99,
+    "aosDelay": "2400"
+  },
+  {
+    "id": 14,
+    "img": "kids4.jpg",
+    "title": "Boys Sweatshirt",
+    "rating": 4.8,
+    "sizes": {
+      "S": 23,
+      "M": 28,
+      "L": 33
+    },
+    "price": 28.99,
+    "aosDelay": "2600"
+  },
+  {
+    "id": 15,
+    "img": "kids5.jpg",
+    "title": "Girls Romper",
+    "rating": 4.9,
+    "sizes": {
+      "S": 24,
+      "M": 29,
+      "L": 34
+    },
+    "price": 29.99,
+    "aosDelay": "2800"
+  },
+  {
+    "id": 16,
+    "img": "kids.jpg",
+    "title": "Boys Polo Shirt",
+    "rating": 4.7,
+    "sizes": {
+      "S": 25,
+      "M": 30,
+      "L": 35
+    },
+    "price": 19.99,
+    "aosDelay": "3000"
+  },
+  {
+    "id": 17,
+    "img": "kids2.jpg",
+    "title": "Girls Leggings",
+    "rating": 4.6,
+    "sizes": {
+      "S": 20,
+      "M": 25,
+      "L": 30
+    },
+    "price": 15.99,
+    "aosDelay": "3200"
+  },
+  {
+    "id": 18,
+    "img": "kids3.jpg",
+    "title": "Boys Shorts",
+    "rating": 4.9,
+    "sizes": {
+      "S": 25,
+      "M": 30,
+      "L": 35
+    },
+    "price": 17.99,
+    "aosDelay": "3400"
+  },
+  {
+    "id": 19,
+    "img": "kids4.jpg",
+    "title": "Girls Jumpsuit",
+    "rating": 4.8,
+    "sizes": {
+      "S": 23,
+      "M": 28,
+      "L": 33
+    },
+    "price": 26.99,
+    "aosDelay": "3600"
+  },
+  {
+    "id": 20,
+    "img": "kids5.jpg",
+    "title": "Boys Tracksuit",
+    "rating": 4.7,
+    "sizes": {
+      "S": 28,
+      "M": 32,
+      "L": 36
+    },
+    "price": 33.99,
+    "aosDelay": "3800"
+  }
+]
