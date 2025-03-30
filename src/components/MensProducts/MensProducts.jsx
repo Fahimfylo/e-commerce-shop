@@ -33,20 +33,20 @@ const Products = () => {
   // Dynamic Titles Based on Route
   const pageTitle =
     location.pathname === "/womens-wear"
-      ? "Women's Collection"
+      ? "Women's wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Latest Trends"
+      ? "Men's wear"
       : location.pathname === "/kids-wear"
-      ? "Adorable Kids' Styles"
+      ? "Adorable Kid's Styles"
       : "Top Selling Products";
 
   const pageHeading =
     location.pathname === "/womens-wear"
       ? "Our latest Women's Wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Wear"
+      ? "Men's Best collections"
       : location.pathname === "/kids-wear"
-      ? "Kids' Wear"
+      ? "Kid's Wear"
       : "Top Selling Products for You";
 
   const pageSubtitle =
@@ -184,26 +184,17 @@ const Products = () => {
                   Available Sizes :
                 </h4>
                 <ul className="text-sm text-black flex flex-row gap-4">
-                  {Object.keys(selectedProduct.sizes).map((size) => (
-                    <li
-                      key={size}
-                      className={`${
-                        size === "M"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "M" ? "" : ""} ${
-                        size === "L"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "L" ? "" : ""} ${
-                        size === "XL"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "XL" ? "" : ""}`}
-                    >
-                      {size}: {selectedProduct.sizes[size]}
-                    </li>
-                  ))}
+                  {Object.keys(selectedProduct.sizes).map((size) => {
+                    const activeStyle = ["S", "M", "L", "XL"].includes(size)
+                      ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
+                      : "";
+
+                    return (
+                      <li key={size} className={activeStyle}>
+                        {size}: {selectedProduct.sizes[size]}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <p className="text-lg font-bold text-red-600 mt-4">

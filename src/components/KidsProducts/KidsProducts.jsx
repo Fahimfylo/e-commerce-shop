@@ -33,20 +33,20 @@ const Products = () => {
   // Dynamic Titles Based on Route
   const pageTitle =
     location.pathname === "/womens-wear"
-      ? "Women's Collection"
+      ? "Women's wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Latest Trends"
+      ? "Men's wear"
       : location.pathname === "/kids-wear"
-      ? "Adorable Kids' Styles"
+      ? "Kid's wear"
       : "Top Selling Products";
 
   const pageHeading =
     location.pathname === "/womens-wear"
       ? "Our latest Women's Wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Wear"
+      ? "Men's Best collections"
       : location.pathname === "/kids-wear"
-      ? "Fashionable Kids' Wear"
+      ? "Fashionable Kid's outfit"
       : "Top Selling Products for You";
 
   const pageSubtitle =
@@ -183,23 +183,15 @@ const Products = () => {
                 <h4 className="font-semibold text-gray-600 pt-1">
                   Available Sizes :
                 </h4>
-                <ul className="text-sm text-black flex flex-row gap-4">
+                <ul className="text-sm flex flex-row gap-4">
                   {Object.keys(selectedProduct.sizes).map((size) => (
                     <li
                       key={size}
-                      className={`${
-                        size === "M"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "M" ? "" : ""} ${
-                        size === "L"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "L" ? "" : ""} ${
-                        size === "XL"
-                          ? "bg-orange-400 text-white p-2 rounded-lg hover:bg-orange-500"
-                          : ""
-                      } ${size === "XL" ? "" : ""}`}
+                      className={`cursor-pointer p-2 rounded-lg hover:bg-orange-500 ${
+                        ["S", "M", "L"].includes(size)
+                          ? "bg-orange-400 text-white"
+                          : "bg-gray-200"
+                      }`}
                     >
                       {size}: {selectedProduct.sizes[size]}
                     </li>

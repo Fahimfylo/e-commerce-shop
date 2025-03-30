@@ -33,18 +33,18 @@ const Products = () => {
   // Dynamic Titles Based on Route
   const pageTitle =
     location.pathname === "/womens-wear"
-      ? "Women's Collection"
+      ? "Women's wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Latest Trends"
+      ? "Men's wear"
       : location.pathname === "/kids-wear"
-      ? "Adorable Kids' Styles"
+      ? "Kid's wear"
       : "Top Selling Products";
 
   const pageHeading =
     location.pathname === "/womens-wear"
       ? "Our latest Women's Wear"
       : location.pathname === "/mens-wear"
-      ? "Men's Wear"
+      ? "Men's Best collections"
       : location.pathname === "/kids-wear"
       ? "Kids' Wear"
       : "Top Selling Products for You";
