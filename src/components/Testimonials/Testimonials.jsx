@@ -4,26 +4,26 @@ const Testimonials = () => {
   const TestimonialData = [
     {
       id: 1,
-      name: "Victor",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+      name: "Alex Thompson",
+      text: "This innovative product has truly streamlined our workflow. Its efficiency and reliability are unmatched, making it an essential tool for our team.",
       img: "https://picsum.photos/101/101",
     },
     {
       id: 2,
-      name: "Satya Nadella",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+      name: "Sophia Martinez",
+      text: "The customer service was exceptional. They were responsive and helpful, resolving my issue quickly. I highly recommend their support for any product-related queries.",
       img: "https://picsum.photos/102/102",
     },
     {
       id: 3,
-      name: "Virat Kohli",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+      name: "Ethan Williams",
+      text: "I've been using this software for months, and it consistently delivers excellent performance. The user interface is intuitive, and the features are robust.",
       img: "https://picsum.photos/104/104",
     },
     {
       id: 5,
-      name: "Sachin Tendulkar",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+      name: "Olivia Brown",
+      text: "The quality of the materials is outstanding. This item is durable and well-crafted, exceeding my expectations. It's a worthwhile investment for anyone seeking longevity.",
       img: "https://picsum.photos/103/103",
     },
   ];
@@ -33,6 +33,7 @@ const Testimonials = () => {
     arrows: false,
     infinite: true,
     speed: 500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -71,15 +72,17 @@ const Testimonials = () => {
       <div className="container">
         {/* header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            What our customers are saying
+          <p
+            data-aos="fade-up"
+            className="text-lg text-indigo-600 font-semibold"
+          >
+            From Customers
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Testimonials
+            Customer Reviews
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+          <p data-aos="fade-up" className="text-lg pt-1 text-gray-500">
+            Read real feedback from our satisfied customers.
           </p>
         </div>
 
@@ -92,7 +95,7 @@ const Testimonials = () => {
                   <div className="mb-4">
                     <img
                       src={data.img}
-                      alt=""
+                      alt={`Profile of ${data.name}`}
                       className="rounded-full w-20 h-20"
                     />
                   </div>

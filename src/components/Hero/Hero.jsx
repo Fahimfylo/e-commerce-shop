@@ -9,23 +9,23 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Upto 50% off on all Men's Wear",
+    title: "Stylish Men's Collection: Up to 50% Off",
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Discover our latest men's wear, featuring premium fabrics and modern designs. Elevate your wardrobe with unbeatable discounts this season.",
   },
   {
     id: 2,
     img: Image2,
-    title: "30% off on all Women's Wear",
+    title: "Elegant Women's Fashion: 30% Off Today",
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Explore our curated selection of women's apparel. From chic dresses to casual essentials, find your perfect style at a special discount.",
   },
   {
     id: 3,
     img: Image3,
-    title: "70% off on all Products Sale",
+    title: "Mega Sale: 70% Off Everything!",
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Don't miss out on our biggest sale event! Get incredible discounts on all products, including fashion, accessories, and more. Limited time offer.",
   },
 ];
 
@@ -52,7 +52,6 @@ const Hero = ({ handleOrderPopup }) => {
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id}>
-              {" "}
               {/* Add the "key" prop here */}
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* text content section */}
@@ -95,7 +94,7 @@ const Hero = ({ handleOrderPopup }) => {
                   >
                     <img
                       src={data.img}
-                      alt=""
+                      alt={data.title}
                       className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
                     />
                   </div>

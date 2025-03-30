@@ -2,42 +2,41 @@ import { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { MdOutlineImageSearch } from "react-icons/md";
 import { useLocation } from "react-router-dom";
-import Popup from "../Popup/Popup"; // Import the Popup component
+import Popup from "../Popup/Popup";
+import { motion, AnimatePresence } from "framer-motion";
 
-// Import all images dynamically
 const images = import.meta.glob("/src/assets/Kids/*", { eager: true });
 
-const Products = () => {
+const KidsProducts = () => {
   const [products, setProducts] = useState([]);
   const [showAll, setShowAll] = useState(false);
-  const [orderPopup, setOrderPopup] = useState(false); // State to control the order popup visibility
-  const [selectedProduct, setSelectedProduct] = useState(null); // State to handle the selected product
-  const [searchPopup, setSearchPopup] = useState(false); // State to manage the search popup
+  const [orderPopup, setOrderPopup] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchPopup, setSearchPopup] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    fetch("/src/data/kids.json")
+    fetch("kids.json")
       .then((res) => res.json())
       .then((data) => {
         const updatedData = data.map((item) => ({
           ...item,
           img:
             images[`/src/assets/Kids/${item.img}`]?.default ||
-            "/default-image.jpg", // Fallback image
+            "/default-image.jpg",
         }));
         setProducts(updatedData);
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
-  // Dynamic Titles Based on Route
   const pageTitle =
     location.pathname === "/womens-wear"
-      ? "Women's wear"
+      ? "Women's Wear"
       : location.pathname === "/mens-wear"
-      ? "Men's wear"
+      ? "Men's Wear"
       : location.pathname === "/kids-wear"
-      ? "Kid's wear"
+      ? "Kid's Wear"
       : "Top Selling Products";
 
   const pageHeading =
@@ -46,7 +45,7 @@ const Products = () => {
       : location.pathname === "/mens-wear"
       ? "Men's Best collections"
       : location.pathname === "/kids-wear"
-      ? "Fashionable Kid's outfit"
+      ? "Kids' Wear"
       : "Top Selling Products for You";
 
   const pageSubtitle =
@@ -58,88 +57,79 @@ const Products = () => {
       ? "Cute and trendy outfits for kids."
       : "Discover top fashion picks for you.";
 
-  // Function to open the product card when image search icon is clicked
   const showProductCard = (product) => {
-    setSelectedProduct(product); // Set the selected product to display in the card
-    setSearchPopup(true); // Open search popup
+    setSelectedProduct(product);
+    setSearchPopup(true);
   };
 
-  // Function to close the product card and reset search popup
   const closeProductCard = () => {
-    setSearchPopup(false); // Close search popup
-    setSelectedProduct(null); // Reset the selected product
+    setSearchPopup(false);
+    setSelectedProduct(null);
   };
 
-  // Function to handle adding to cart and showing the order popup
   const handleAddToCart = (product) => {
-    setSelectedProduct(product); // Set the selected product for cart
-    setOrderPopup(true); // Trigger the order popup
+    setSelectedProduct(product);
+    setOrderPopup(true);
   };
 
-  // Function to close the order popup
   const closeOrderPopup = () => {
-    setOrderPopup(false); // Close order popup
-    setSelectedProduct(null); // Reset the selected product
+    setOrderPopup(false);
+    setSelectedProduct(null);
   };
 
   return (
-    <div className="mt-14 mb-12">
-      <div className="container">
-        {/* Dynamic Section Heading */}
-        <div className="text-center y-4 mb-10 max-w-[600px] mx-auto">
-          <p className="text-md text-primary">{pageTitle}</p>
-          <h1 className="text-3xl font-bold pt-3 pb-1">{pageHeading}</h1>
-          <p className="text-md text-gray-400">{pageSubtitle}</p>
+    <div className="mt-16 mb-16 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-indigo-600 font-semibold">{pageTitle}</p>
+          <h1 className="text-4xl font-extrabold text-gray-900 mt-3 mb-2">
+            {pageHeading}
+          </h1>
+          <p className="text-lg text-gray-500">{pageSubtitle}</p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
           {(showAll ? products : products.slice(0, 5)).map((data) => (
-            <div
+            <motion.div
               key={data.id}
-              className="space-y-3 my-4 mx-2 p-3 sm:p-3 md:p-4 lg:p-5 rounded-md shadow-lg hover:shadow-xl transition"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6"
             >
               <img
                 src={data.img}
                 alt={data.title}
-                className="lg:h-[250px] lg:w-[250px] md:h-[220px] md:w-[220px] object-cover rounded-md mx-auto"
+                className="w-full h-64 object-cover rounded-xl mb-4"
               />
-              <div className="text-start">
-                <div className="flex flex-row items-center space-x-2">
-                  <h3 className="font-semibold text-blue-500 text-lg pb-1">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-1">
                     {data.title}
                   </h3>
-                  <span>
-                    <MdOutlineImageSearch
-                      className="mt-2 ml-2 cursor-pointer mb-3 text-red-600"
-                      size={16}
-                      onClick={() => showProductCard(data)} // Open search popup
-                    />
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <p className="text-lg font-bold text-gray-600">
+                  <p className="text-lg font-bold text-gray-800">
                     ${data.price}
                   </p>
-                  <div>
-                    <FaCartPlus
-                      className="text-green-500 cursor-pointer"
-                      size={20}
-                      onClick={() => handleAddToCart(data)} // Trigger the cart popup
-                    />
-                  </div>
+                </div>
+                <div className="flex mt-1 items-start space-x-2">
+                  <MdOutlineImageSearch
+                    className="text-red-600 cursor-pointer text-xl"
+                    onClick={() => showProductCard(data)}
+                  />
+                  <FaCartPlus
+                    className="text-green-600 cursor-pointer text-xl"
+                    onClick={() => handleAddToCart(data)}
+                  />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* View All Button */}
         {!showAll && (
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-12">
             <button
-              className="mt-10 bg-primary text-white py-2 px-6 rounded-md hover:bg-primary-dark transition"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
               onClick={() => setShowAll(true)}
             >
               View All
@@ -147,66 +137,83 @@ const Products = () => {
           </div>
         )}
 
-        {/* Render the Order Popup */}
-        {orderPopup && (
-          <Popup
-            orderPopup={orderPopup}
-            setOrderPopup={closeOrderPopup} // Close the order popup
-            product={selectedProduct} // Pass selected product to Popup
-          />
-        )}
+        <AnimatePresence>
+          {orderPopup && (
+            <Popup
+              orderPopup={orderPopup}
+              setOrderPopup={closeOrderPopup}
+              product={selectedProduct}
+            />
+          )}
+        </AnimatePresence>
 
-        {/* Render the Search Popup */}
-        {searchPopup && selectedProduct && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-6 rounded-md w-[400px]">
-              <div className="flex justify-end">
-                <button onClick={closeProductCard} className="text-2xl">
-                  &times;
-                </button>
-              </div>
-              <img
-                src={selectedProduct.img}
-                alt={selectedProduct.title}
-                className="w-full h-[250px] object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-semibold text-blue-600">
-                {selectedProduct.title}
-              </h3>
-              <p className="text-md text-gray-600 mt-2">
-                {selectedProduct.description}
-                <span className="text-md font-semibold">
-                  Rating : {selectedProduct.rating} ⭐
-                </span>
-              </p>
-              <div className="mt-4 flex gap-4">
-                <h4 className="font-semibold text-gray-600 pt-1">
-                  Available Sizes :
-                </h4>
-                <ul className="text-sm flex flex-row gap-4">
-                  {Object.keys(selectedProduct.sizes).map((size) => (
-                    <li
-                      key={size}
-                      className={`cursor-pointer p-2 rounded-lg hover:bg-orange-500 ${
-                        ["S", "M", "L"].includes(size)
-                          ? "bg-orange-400 text-white"
-                          : "bg-gray-200"
-                      }`}
-                    >
-                      {size}: {selectedProduct.sizes[size]}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="text-lg font-bold text-red-600 mt-4">
-                ${selectedProduct.price}
-              </p>
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {searchPopup && selectedProduct && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -50, scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="bg-white p-8 rounded-2xl w-[90%] max-w-md"
+              >
+                <div className="flex justify-end">
+                  <button
+                    onClick={closeProductCard}
+                    className="text-2xl text-gray-600"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <img
+                  src={selectedProduct.img}
+                  alt={selectedProduct.title}
+                  className="w-full h-64 object-cover rounded-xl mb-4"
+                />
+                <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+                  {selectedProduct.title}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {selectedProduct.description}{" "}
+                  <span className="font-semibold">
+                    Rating: {selectedProduct.rating} ⭐
+                  </span>
+                </p>
+                <div className="flex items-center gap-4 mb-4">
+                  <h4 className="font-semibold text-gray-700">
+                    Available Sizes:
+                  </h4>
+                  <ul className="flex gap-2">
+                    {Object.keys(selectedProduct.sizes).map((size) => (
+                      <li
+                        key={size}
+                        className={`px-3 py-1 rounded-full text-sm ${
+                          size === "S" || size === "M" || size === "L"
+                            ? "bg-orange-400 text-white"
+                            : "bg-gray-200"
+                        }`}
+                      >
+                        {size}: {selectedProduct.sizes[size]}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-xl font-bold text-red-700">
+                  ${selectedProduct.price}
+                </p>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
 };
 
-export default Products;
+export default KidsProducts;

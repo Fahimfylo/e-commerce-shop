@@ -23,15 +23,15 @@ const FooterLinks = [
     link: "/#",
   },
   {
-    title: "About",
+    title: "About Us",
     link: "/#about",
   },
   {
-    title: "Contact",
+    title: "Contact Us",
     link: "/#contact",
   },
   {
-    title: "Blog",
+    title: "Our Blog",
     link: "/#blog",
   },
 ];
@@ -44,12 +44,17 @@ const Footer = () => {
           {/* company details */}
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="" className="max-w-[50px]" />
+              <img
+                src={footerLogo}
+                alt="Shopex Logo"
+                className="max-w-[50px]"
+              />
               Shopex
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
+              Your one-stop destination for quality fashion and lifestyle
+              products. We are dedicated to providing exceptional customer
+              service and curated collections that inspire your style.
             </p>
           </div>
 
@@ -58,7 +63,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
+                  Quick Navigation
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
@@ -75,7 +80,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
+                  Company Info
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
@@ -94,13 +99,13 @@ const Footer = () => {
 
             <div>
               <div className="flex items-center gap-3 mt-6">
-                <a href="#">
+                <a href="https://www.instagram.com/">
                   <FaInstagram className="text-3xl" />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/">
                   <FaFacebook className="text-3xl" />
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/">
                   <FaLinkedin className="text-3xl" />
                 </a>
               </div>

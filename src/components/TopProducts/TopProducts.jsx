@@ -8,23 +8,23 @@ const ProductsData = [
   {
     id: 1,
     img: Img1,
-    title: "Casual Wear",
+    title: "Classic Cotton Casual Shirt",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A comfortable and stylish cotton shirt, perfect for everyday wear. Ideal for casual outings or relaxed gatherings.",
   },
   {
     id: 2,
     img: Img2,
-    title: "Printed shirt",
+    title: "Vibrant Printed Pattern Shirt",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Make a statement with this eye-catching printed shirt. Featuring a unique design, it's perfect for adding personality to your look.",
   },
   {
     id: 3,
     img: Img3,
-    title: "Women shirt",
+    title: "Elegant Women's Blouse",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A sophisticated blouse designed for women. Its soft fabric and elegant cut make it a versatile addition to any wardrobe.",
   },
 ];
 
@@ -38,11 +38,11 @@ const TopProducts = ({ handleOrderPopup }) => {
             Top Rated Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Best Products
+            Best Selling Shirts
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+            Explore our curated selection of top-rated shirts, chosen for their
+            quality and style.
           </p>
         </div>
         {/* Body section */}
@@ -57,7 +57,7 @@ const TopProducts = ({ handleOrderPopup }) => {
               <div className="h-[100px]">
                 <img
                   src={data.img}
-                  alt=""
+                  alt={data.title}
                   className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
                 />
               </div>
